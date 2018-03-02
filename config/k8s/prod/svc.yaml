@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: go-template
+  namespace: sdyxmall
+  labels:
+    kubernetes.io/cluster-service: "true"
+    kubernetes.io/name: "go-template"
+spec:
+  ports:
+    - name: go-template
+      port: 80
+      targetPort: 8080
+  selector:
+    app: go-template

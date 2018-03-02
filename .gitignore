@@ -1,0 +1,5 @@
+.idea/
+go-template.iml
+go-template
+deploy_tmp/
+Dockerfile
