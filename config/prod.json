@@ -1,0 +1,45 @@
+{
+  "name": "go-template",
+  "version": "0.1",
+  "isDevelopment": false,
+  "buildDir": "./build/",
+  "k8sDir": "./k8s/",
+  "appId": 3,
+  "log": {
+    "path": "/data/logs/maizuo.log"
+  },
+  "server": {
+    "port": "8080",
+    "host": ""
+  },
+  "db": {
+    "dialect": "mysql",
+    "host": "192.168.1.204",
+    "port": 3306,
+    "user": "web",
+    "password": "123456",
+    "database": "d_jike_mall_business",
+    "maxIdle": 20,
+    "maxOpen": 20,
+    "connMaxLifetime": 1000
+  },
+  "redis": {
+    "addr": "192.168.1.204:6379",
+    "password": "123456",
+    "database": 2,
+    "maxActive": 50,
+    "idleTimeout": 60
+  },
+  "nsq": {
+    "tcp": "192.168.1.204:4150",
+    "lookup":"192.168.1.204:4161",
+    "topic": "DATA_CFG_BANNER_PUSH_V2",
+    "channel": "business-mng_local"
+  },
+  "domain": {
+    "business-public": "http://business-public.aurayou",
+    "business-procduct":"http://business-product.aurayou",
+    "business-cfg": "http://business-cfg"
+  }
+
+}

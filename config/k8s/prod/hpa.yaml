@@ -1,0 +1,13 @@
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: go-template
+  namespace: sdyxmall
+spec:
+  scaleTargetRef:
+    apiVersion: extensions/v1beta1
+    kind: Deployment
+    name: go-template
+  minReplicas: 4
+  maxReplicas: 6
+  targetCPUUtilizationPercentage: 70

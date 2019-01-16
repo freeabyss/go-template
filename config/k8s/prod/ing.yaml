@@ -1,0 +1,17 @@
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name:  go-template
+  namespace: aurayou
+  annotations:
+    kubernetes.io/ingress.class: proxy-in
+spec:
+  rules:
+  - host:  go-template
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: go-template
+          servicePort: 8080
